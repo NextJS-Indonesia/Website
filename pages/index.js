@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/core";
 // components
 import data from "./data";
+import Brand from "../components/brand";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
 
       <Flex as="main" alignItems="center" justifyContent="center" mt="10">
         <Stack>
+          <Brand />
           <Box textAlign="center">
             <Heading as="h1" size="2xl" mb="2">
               Selamat datang{" "}
