@@ -13,6 +13,7 @@ export default function Header() {
       alignItems="center"
       pt="10px"
       mb="60px"
+      px={[null, 2, null, 2]}
     >
       <Brand />
       <Stack isInline>
