@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Stack, Button } from "@chakra-ui/core";
+import { Flex, Stack, Button, Box } from "@chakra-ui/core";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 
 // components
@@ -16,24 +16,36 @@ export default function Header() {
     >
       <Brand />
       <Stack isInline>
-        <Button
-          as="a"
-          href="https://github.com/ekaone/Git-Hunter"
-          target="_blank"
-          leftIcon={FaGithub}
-        >
-          View Source
-        </Button>
-        <Button
-          variantColor="blue"
-          leftIcon={FaTwitter}
-          as="a"
-          href="https://twitter.com/dannyeka"
-          target="_blank"
-          leftIcon={FaGithub}
-        >
-          Tweet
-        </Button>
+        <Box px="15px">
+          <Button
+            as="a"
+            cursor="pointer"
+            href="https://github.com/ekaone/Git-Hunter"
+            target="_blank"
+            leftIcon={FaGithub}
+            variant="link"
+            iconSpacing="4px"
+            fontSize="16px"
+            _hover={{ textDecor: "none", color: "gray.900" }}
+          >
+            Github
+          </Button>
+        </Box>
+        <Box>
+          <Button
+            as="a"
+            cursor="pointer"
+            href="https://twitter.com/dannyeka"
+            target="_blank"
+            leftIcon={FaTwitter}
+            variant="link"
+            iconSpacing="4px"
+            fontSize="16px"
+            _hover={{ textDecor: "none", color: "blue.600" }}
+          >
+            Tweet
+          </Button>
+        </Box>
       </Stack>
     </Flex>
   );
